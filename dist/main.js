@@ -1,1 +1,1 @@
-console.log("Working");
+(()=>{"use strict";let e=document.querySelector("#content");(()=>{let t=document.createElement("div");t.className="menu",e.appendChild(t),console.log("Menu is working?")})()})();
