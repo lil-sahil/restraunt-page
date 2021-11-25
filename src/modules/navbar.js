@@ -1,32 +1,28 @@
 // Import content div
 import { contentDiv } from "../helper_funcs/funcs.js";
 
+
+// Factory Function to create nav bar items
+
+const addNavItems = (items, container) => {
+
+  items.forEach(element => {
+    let individualElement = document.createElement('div');
+    individualElement.className = 'navItem';
+    individualElement.innerHTML = element;
+    container.appendChild(individualElement);
+  });
+
+  return container;
+};
+
+
 // Navbar
+export const navBar = () => {
+  let bar =  document.createElement('div')
+  bar.className = 'navBar'
+
+  contentDiv.appendChild(addNavItems(["Home", "Menu", "Contact"], bar));
 
 
-const addMenuItem = (name, description) => {
-  let menuItemContainer = document.createElement('div');
-  menuItemContainer.className = 'menu-item';
-  
-  let menuName = document.createElement('h2');
-  menuName.innerHTML = `${name}`;
-
-  let menuDesc = document.createElement('p');
-  menuDesc.innerHTML = `${description}`;
-  
-  menuItemContainer.appendChild(menuName);
-  menuItemContainer.appendChild(menuDesc);
-
-  return menuItemContainer
-}
-
-export const menu = () => {
-  let menuBar =  document.createElement('div')
-  menuBar.className = 'navBar'
-
-  menuBar.appendChild(addMenuItem('Pizza', 'Zesty Thin crust'));
-  menuBar.appendChild(addMenuItem('Spaghetti', 'Spicy Meatball'));
-  menuBar.appendChild(addMenuItem('Salad', 'Lettuce and Tomatoes'));
-
-  contentDiv.appendChild(menuBar);
-}
+};

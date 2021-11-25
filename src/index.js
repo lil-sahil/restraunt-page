@@ -1,3 +1,3 @@
-import { menu } from "./modules/navbar.js";
+import { navBar } from "./modules/navbar.js";
 
-menu()
+navBar()
