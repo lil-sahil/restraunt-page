@@ -17,6 +17,8 @@ const addNavItems = (items, container) => {
 };
 
 
+
+
 // Navbar
 export const navBar = () => {
   let bar =  document.createElement('div')
