@@ -8,7 +8,7 @@ const addNavItems = (items, container) => {
 
   items.forEach(element => {
     let individualElement = document.createElement('div');
-    individualElement.className = 'navItem';
+    individualElement.classList.add('navItem',`${element}`);
     individualElement.innerHTML = element;
     container.appendChild(individualElement);
   });
