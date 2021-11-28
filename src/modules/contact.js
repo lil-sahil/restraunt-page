@@ -1,5 +1,5 @@
 // Import content div
-import { contentDiv } from "../helper_funcs/funcs.js";
+import { contentDiv, clearContent } from "../helper_funcs/funcs.js";
 
 // Form Factory
 
@@ -14,10 +14,14 @@ const addForm = (fieldName) => {
   container.appendChild(field);
   container.appendChild(input);
 
+  container.classList.add(fieldName);
   return container;
 };
 
 
 export const contactForm = () => {
+  clearContent();
   contentDiv.appendChild(addForm('Name'));
+  contentDiv.appendChild(addForm('Email'));
+  contentDiv.appendChild(addForm('Message'));
 };

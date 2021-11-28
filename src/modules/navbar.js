@@ -25,6 +25,4 @@ export const navBar = () => {
   bar.className = 'navBar'
 
   contentDiv.appendChild(addNavItems(["Home", "Menu", "Contact"], bar));
-
-
 };

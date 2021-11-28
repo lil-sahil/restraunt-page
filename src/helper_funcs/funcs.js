@@ -4,7 +4,6 @@
 export let contentDiv = document.querySelector('#content');
 
 
-
 // Contact Button Div
 export let getContactButton = () => {
   return document.querySelector('.Contact');
@@ -20,4 +19,12 @@ export let getMenuButton = () => {
 // Home Button Div
 export let getHomeButton = () => {
   return document.querySelector('.Home');
+};
+
+
+// Clear Content div
+export const clearContent = () => {
+  while(contentDiv.lastChild.className !== 'navBar'){
+    contentDiv.removeChild(contentDiv.lastChild);
+  }
 };
