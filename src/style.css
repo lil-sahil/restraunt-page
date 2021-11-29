@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: yellow;
+}
+
 #container {
   width: 80vw;
 }
@@ -13,6 +17,26 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 60%;
   margin: 1rem 0;
+}
+
+.showCase {
+  height: 100vh;
+  background: url('./photos/showcase.jpg') no-repeat center center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: row;
+}
+
+.menuItem > .image > img {
+  max-width: 100px;
+  max-height: 100px;
+  background-size: contain;
 }

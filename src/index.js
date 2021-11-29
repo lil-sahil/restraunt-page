@@ -3,6 +3,7 @@ import { navBar } from "./modules/navbar.js";
 import { contactForm } from "./modules/contact.js";
 import { homePage } from "./modules/home.js";
 import { menuPage } from "./modules/menu.js";
+import './style.css';
 
 
 // DOM elements imports
@@ -10,6 +11,7 @@ import { getContactButton, getMenuButton, getHomeButton } from "./helper_funcs/f
 
 // Initialization
 navBar();
+homePage();
 
 // Home
 
@@ -39,4 +41,3 @@ const contactEventListner = ( () => {
   getHomeButton().addEventListener('click', homePage);
 
 })();
-
