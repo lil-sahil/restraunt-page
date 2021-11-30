@@ -3,6 +3,7 @@ import { navBar } from "./modules/navbar.js";
 import { contactForm } from "./modules/contact.js";
 import { homePage } from "./modules/home.js";
 import { menuPage } from "./modules/menu.js";
+import { titlePiece } from "./modules/title.js";
 import './style.css';
 
 
@@ -10,6 +11,7 @@ import './style.css';
 import { getContactButton, getMenuButton, getHomeButton } from "./helper_funcs/funcs.js";
 
 // Initialization
+titlePiece();
 navBar();
 homePage();
 

@@ -12,12 +12,31 @@ body {
   width: 80vw;
 }
 
+.title {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .navBar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  max-width: 400px;
+  height: 20px;
+}
+
+.navItem {
+  width: 70px;
+}
+
+.navItem:hover {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .showCase {
