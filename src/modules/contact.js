@@ -15,13 +15,38 @@ const addForm = (fieldName) => {
   container.appendChild(input);
 
   container.classList.add(fieldName);
+
   return container;
+};
+
+// Button Event listner
+
+const buttonListen = (b) => {
+  b.addEventListener('click', contactForm)
 };
 
 
 export const contactForm = () => {
   clearContent();
-  contentDiv.appendChild(addForm('Name'));
-  contentDiv.appendChild(addForm('Email'));
-  contentDiv.appendChild(addForm('Message'));
+  let form = document.createElement('div')
+  form.className = 'formContainer';
+
+  let contactSlogan = document.createElement('h1')
+  contactSlogan.innerHTML = 'Contact Us Today!'
+
+  let submitButton = document.createElement('button');
+  submitButton.innerHTML = 'Submit';
+  submitButton.setAttribute('type','submit');
+
+
+  form.appendChild(contactSlogan);
+  form.appendChild(addForm('Name'));
+  form.appendChild(addForm('Email'));
+  form.appendChild(addForm('Message'));
+  form.appendChild(submitButton);
+  
+  contentDiv.appendChild(form);
+
+  buttonListen(submitButton);
 };
+

@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: yellow;
+  background-color: #e4c45d
+  ;
 }
 
 #container {
@@ -32,15 +33,18 @@ body {
 
 .navItem {
   width: 70px;
+  border: #fff 1px solid;
+  text-align: center;
 }
 
-.navItem:hover {
-  font-size: 1.5rem;
+.navItem:hover, .special{
+  font-size: 1.2rem;
   cursor: pointer;
+  background-color: #fcba03;
 }
 
 .showCase {
-  height: 100vh;
+  height: 80vh;
   background: url('./photos/showcase.jpg') no-repeat center center;
   color: #fff;
   display: flex;
@@ -49,13 +53,57 @@ body {
   align-items: center;
 }
 
+.menuContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuSlogan {
+  margin-top: 50px;
+}
+
 .menuItem {
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 400px;
+  border: #fff solid 2px;
+  border-radius: 2px;
+}
+
+.menuItem:nth-child(odd){
+  margin-right: 25px;
+}
+
+
+.menuItem:nth-child(even){
+  margin-left: 25px;
 }
 
 .menuItem > .image > img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 200px;
+  max-height: 200px;
   background-size: contain;
+}
+
+.menuItem > .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer > * {
+  margin: 10px;
 }

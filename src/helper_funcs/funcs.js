@@ -28,3 +28,16 @@ export const clearContent = () => {
     contentDiv.removeChild(contentDiv.lastChild);
   }
 };
+
+
+// Add a special selection around current selected navbar item
+export const addSpecialSelection = (item) => {
+  item.classList.add('special');
+
+  for (let i of [getContactButton(), getHomeButton(), getMenuButton()]){
+    if (i !== item){
+      i.classList.remove('special');
+    };
+  };
+};
+
